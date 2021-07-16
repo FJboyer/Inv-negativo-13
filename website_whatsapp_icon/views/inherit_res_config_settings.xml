@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inherit_res_config_settings" model="ir.ui.view">
+        <field name="name">inherit.res.config.settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('app_settings_block')]/div[@id='website_settings']" position="after">
+                <div class="row mt16 o_settings_container" id="whatsapp_settings_div">
+                    <div class="col-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="show_whatsapp_icon" title="Show WhatsApp Icon"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label string="WhatsApp Icon" for="whatsapp_no"/>
+                            <span class="fa fa-lg fa-whatsapp" title="Website WhatsApp Icon."/>
+                            <div class="text-muted">
+                                WhatsApp number with country code, No plus (+) sign.
+                            </div>
+                            <div class="content-group">
+                                <div class="row">
+                                    <label for="whatsapp_no" string="WhatsApp Number" class="col-md-4 o_light_label"/>
+                                    <field name="whatsapp_no" placeholder="Enter Your WhatsApp Number."
+                                           attrs="{'readonly': [('show_whatsapp_icon', '!=', True)], 'required': [('show_whatsapp_icon', '=', True)]}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

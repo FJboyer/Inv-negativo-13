@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="FloatingWhatsAppIcon" name="Floating WhatsApp Icon" inherit_id="portal.frontend_layout">
+        <xpath expr="//div[@id='wrapwrap']/header" position="after">
+            <div id="whatsapp_icon_main_div">
+                <a id="whatsapp_icon_div"
+                   class="wa_float" title="Chat Us on WhatsApp">
+                    <i class="fa fa-whatsapp my-float"/>
+                </a>
+            </div>
+        </xpath>
+    </template>
+</odoo>
